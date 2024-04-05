@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hyperlink Intro</title>
+</head>
+
+<body>
+    <div class="grid-container">
+        <nav>
+            <div class="nav-content">
+                <a href="#" id="concept">Explain</a>
+                <a href="#" id="timeTravel">Time Travel</a>
+                <a href="#" id="About">About</a>
+            </div>
+        </nav>
+        <div class="main">
+            <section id="definition">
+                <h2>What are Hyperlinks?</h2>
+                <p>In simple words, a Hyperlink is a digital reference to data that user can follow or be guided to by
+                    clicking or tapping.
+                    In the context of web, hyperlinks are embeded in text, images, icons or other elements within web
+                    pages.
+                    A hyperlink points to a whole document or to a specific element within a document. A simple and common hyperlink embeded in text can be:</p>
+
+                    <p><a href="http://www.google.com">Click me to Google!</a></p>
+
+                <p>They allow users to navigate between different web pages and resources seamlessly, forming the
+                    interconnected network we use every day.</p>
+            </section>
+            <section id="exmaples">
+                <h2>Different types of Hyperlinks</h2>
+                <div id="example-grid">
+                    <div class="link-example">
+                        <div>Text Hyperlink</div>
+                        <div>A Hyperlink can be embeded in text, this is quite commonly seen in web pages.</div>
+                        <div><a href="https://www.pokemon.com/au/">Visit Pokemon Web</a></div>
+                        <div>HTML code:</div>
+                        <code class="language-html">
+                            &lta href="https://www.pokemon.com/au/"&gtVisit Pokemon Web&lt/a&gt
+                        </code>
+                    </div>
+                    <div class="link-example">
+                        <div>Image Hyperlink</div>
+                        <div>Hyperlinks can also be applied to images. Clicking on the linked image navigates the user to the designated URL.</div>
+                        <div><a href="https://www.pokemon.com/au/">
+                            <img src="pokemon.png" alt="Pokemon Image">
+                        </a></div>
+                        <div>HTML code:</div>
+                        <code class="language-html">
+                            &ltimg src="pokemon.png" alt="Pokemon Image"&gt
+                        </code>
+                    </div>
+                    <div class="link-example">
+                        <div>Mailto Hyperlink</div>
+                        <div>Hyperlinks can also be applied to images. Clicking on the linked image navigates the user to the designated URL.</div>
+                        <div>
+                            <a href="mailto:23870387@student.uwa.edu.au">Send Me An Email!</a>
+                        </div>
+                        <div>HTML code:</div>
+                        <code class="language-html">
+                            &ltimg src="pokemon.png" alt="Pokemon Image"&gt
+                        </code>
+
+                    </div>
+                    <div class="link-example">
+                        <div>Download Hyperlink</div>
+                        <div>Hyperlinks can also be applied to images. Clicking on the linked image navigates the user to the designated URL.</div>
+                        <div>
+                            <a href="pokemon.png" download>Get a Pikachu!</a>
+                        </div>
+                        <div>HTML code:</div>
+                        <code class="language-html">
+                            &ltimg src="pokemon.png" alt="Pokemon Image"&gt
+                        </code>
+                    </div>
+                    <div class="link-example">
+                        <div>Download Hyperlink</div>
+                        <div>Hyperlinks can also be applied to images. Clicking on the linked image navigates the user to the designated URL.</div>
+                        <div>
+                            <a href="pokemon.png" download>Get a Pikachu!</a>
+                        </div>
+                        <div>HTML code:</div>
+                        <code class="language-html">
+                            &ltimg src="pokemon.png" alt="Pokemon Image"&gt
+                        </code>
+                    </div>
+                </div>
+            </section>
+            <section id="sec3">
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<style>
+    .grid-container {
+        display: grid;
+        grid-template-rows: 50px auto;
+        grid-template-columns: 1fr 7fr 1fr;
+        grid-template-areas:
+            'nav nav nav'
+            '. main .';
+    }
+
+    nav {
+        background-color: #27374D;
+        grid-area: nav;
+        display: grid;
+        grid-template-columns: 1fr 7fr 1fr;
+        grid-template-areas: '. main .';
+    }
+
+    .nav-content {
+        display: grid;
+        grid-area: main;
+        grid-template-columns: repeat(8, 1fr);
+        grid-gap: 10px;
+    }
+
+    #concept {
+        grid-column: 1;
+    }
+
+    #timeTravel {
+        grid-column: 2;
+    }
+
+    #about {
+        grid-column: 3;
+    }
+
+    nav a {
+        align-items: center;
+        color: white;
+    }
+
+    nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .main {
+        grid-area: main;
+        height: calc(100vh - 100px);
+    }
+
+    body {
+        margin: 0;
+        background-color: white;
+    }
+
+    section {
+        margin-bottom: 40px;
+    }
+
+    #example-grid {
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1em;
+    }
+</style>
