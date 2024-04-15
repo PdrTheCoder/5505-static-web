@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hyperlink Intro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <script src="js/bootstrap.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <div class="grid-container">
+        <nav>
+            <div class="nav-content">
+                <a href="index.html" id="concept">Explain</a>
+                <a href="timetravel.html" id="timeTravel">Time Travel</a>
+                <a href="about.html" id="About">About</a>
+            </div>
+        </nav>
+        <div class="main">
+            <section id="aboutme">
+            </section>
+        </div>
+        <footer>Pedro Wang (23870387) - 2024 - CITS4407</footer>
+    </div>
+</body>
+
+</html>
+
+<style>
+    body {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-rows: 50px auto 20px;
+        grid-template-columns: 2fr 7fr 2fr;
+        grid-template-areas:
+            'nav nav nav'
+            '. main .'
+            'footer footer footer';
+    }
+
+    footer {
+        grid-area: footer;
+        text-align: center;
+    }
+
+    nav {
+        background-color: #31363F;
+        grid-area: nav;
+        display: grid;
+        grid-template-columns: 2fr 7fr 2fr;
+        grid-template-areas: '. navmain .';
+    }
+
+    .nav-content {
+        display: grid;
+        grid-area: navmain;
+        grid-template-columns: repeat(8, 1fr);
+        grid-gap: 10px;
+    }
+
+    .nav-content>a:hover {
+        background-color: #76ABAE;
+        color: white;
+    }
+
+    .nav-content>a {
+        line-height: 50px;
+        text-decoration: none;
+    }
+
+    #concept {
+        grid-column: 1;
+    }
+
+    #timeTravel {
+        grid-column: 2;
+    }
+
+    #about {
+        grid-column: 3;
+    }
+
+    nav a {
+        align-items: center;
+        text-align: center;
+        color: white;
+    }
+
+    nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .main {
+        grid-area: main;
+        /* height: calc(100vh - 100px); */
+    }
+
+    body {
+        margin: 0;
+        background-color: white;
+    }
+
+    section {
+        margin-bottom: 40px;
+    }
+</style>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hyperlink Intro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <script src="js/bootstrap.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <div class="grid-container">
+        <nav>
+            <div class="nav-content">
+                <a href="index.html" id="concept">Explain</a>
+                <a href="timetravel.html" id="timeTravel">Time Travel</a>
+                <a href="about.html" id="About">About</a>
+            </div>
+        </nav>
+        <div class="main">
+            <section id="definition">
+                <h2>History of Hyperlink</h2>
+                <ul class="timeline">
+                    <li>
+                        <h6>1945 - Concept of linking information</h6>
+                        <p>An Essay "As We May Think" was published. In this essay, Vannevar Bush described the concept
+                            of linking information together in a
+                            "trail" using a microfilm-based machine called the Memex.</p>
+                    </li>
+                    <li>
+                        <h6>1964/1965 - The term "link" and theoretical worldwide computure network</h6>
+                        <p>Ted Nelson, inspired by Bush's ideas, coins the term "link". From 1964 to 1980, he transposed
+                            Bush's concept of automated cross-referencing into the computer context, made it applicable
+                            to specific text strings rather than whole pages. Ted Nelson generalized the concept from a
+                            local desk-size machine to a theoretical proprietary worldwide computer network. He then
+                            advocated
+                            the creation of such network.</p>
+                    </li>
+                    <li>
+                        <h6>1966 - First implementation</h6>
+                        <p>A team led by Douglas Engelbart implemented the hyperlink for scrolling within a single
+                            document, and soon in
+                            1968 for connecting paragraphs within speparate documents.
+                        </p>
+                    </li>
+                    <li>
+                        <h6>1983 - Highlighted links in HyperTIES system</h6>
+                        <p>Ben Shneiderman and graduate student Dan Ostroff implement highlighted links in the HyperTIES
+                            system. The HyperTIES system was used to created
+                            the world's first eletronic journal.
+                        </p>
+                    </li>
+                    <li>
+                        <h6>1987 - Hyperlinking between various pages</h6>
+                        <p>
+                            Apple releases HyperCard for the Macintosh, allowing hyperlinking between pages within a
+                            document and to other documents and applications.
+                        </p>
+                    </li>
+                    <li>
+                        <h6>1990 - Widespread use of hyperlink and visually effect</h6>
+                        <p>Windows Help, introduced with Microsoft Windows 3.0, features widespread use of hyperlinks
+                            within help files. Also visually different kind of
+                            hyperlink was used.
+                        </p>
+                    </li>
+                    <li>
+                        <h6>1991 - First widely adopted open protocal</h6>
+                        <p>The Gopher protocol becomes the first widely used open protocol to include hyperlinks between
+                            Internet sites.
+                        </p>
+                    </li>
+                    <li>
+                        <h6>1993 - HTML and browser</h6>
+                        <p> The Mosaic browser is released, which can handle both Gopher and HTML links. HTML's
+                            advantage of mixing graphics, text, and hyperlinks leads to its widespread adoption.
+                        </p>
+                    <li>
+                        <h6>2000s - Dynamic routing in single page</h6>
+                        <p> Development of modern web frameworks like React and Vue enables efficient creation of
+                            single-page applications with dynamic routing and navigation, facilitating seamless linking
+                            between various views within the same page.
+                        </p>
+                    </li>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <footer>Pedro Wang (23870387) - 2024 - CITS4407</footer>
+    </div>
+</body>
+
+</html>
+
+<style>
+    body {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-rows: 50px auto 20px;
+        grid-template-columns: 2fr 7fr 2fr;
+        grid-template-areas:
+            'nav nav nav'
+            '. main .'
+            'footer footer footer';
+    }
+
+    footer {
+        grid-area: footer;
+        text-align: center;
+    }
+
+    nav {
+        background-color: #31363F;
+        grid-area: nav;
+        display: grid;
+        grid-template-columns: 2fr 7fr 2fr;
+        grid-template-areas: '. navmain .';
+    }
+
+    .nav-content {
+        display: grid;
+        grid-area: navmain;
+        grid-template-columns: repeat(8, 1fr);
+        grid-gap: 10px;
+    }
+
+    .nav-content>a:hover {
+        background-color: #76ABAE;
+        color: white;
+    }
+
+    .nav-content>a {
+        line-height: 50px;
+        text-decoration: none;
+    }
+
+    #concept {
+        grid-column: 1;
+    }
+
+    #timeTravel {
+        grid-column: 2;
+    }
+
+    #about {
+        grid-column: 3;
+    }
+
+    nav a {
+        align-items: center;
+        text-align: center;
+        color: white;
+    }
+
+    nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .main {
+        grid-area: main;
+        /* height: calc(100vh - 100px); */
+    }
+
+    body {
+        margin: 0;
+        background-color: white;
+    }
+
+    section {
+        margin-bottom: 40px;
+    }
+
+    #example-grid {
+        display: grid;
+        grid-template-rows: auto auto auto auto;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1em;
+    }
+
+    .link-example {
+        display: grid;
+        grid-template-rows: 40px minmax(40px, auto) minmax(180px, auto) 30px 45px;
+        grid-row-gap: 1em;
+
+        code {
+            background-color: #d9d9d9;
+            line-height: 45px;
+            text-align: center;
+        }
+    }
+
+    .link-example>div:first-child {
+        background-color: #284b63;
+        color: white;
+        line-height: 40px;
+        text-align: center;
+        font-size: larger;
+    }
+
+    .link-example>div:nth-child(3) {
+        text-align: center;
+        line-height: 180px;
+    }
+
+    #remote-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 5px;
+    }
+
+    .blank {
+        margin-bottom: 40px;
+    }
+
+    ul.timeline {
+        list-style-type: none;
+        position: relative;
+    }
+
+    ul.timeline:before {
+        content: ' ';
+        background: #d4d9df;
+        display: inline-block;
+        position: absolute;
+        left: 29px;
+        width: 2px;
+        height: 100%;
+        z-index: 400;
+    }
+
+    ul.timeline>li {
+        margin: 20px 0;
+        padding-left: 20px;
+    }
+
+    ul.timeline>li:before {
+        content: ' ';
+        background: white;
+        display: inline-block;
+        position: absolute;
+        border-radius: 50%;
+        border: 3px solid #76ABAE;
+        left: 20px;
+        width: 20px;
+        height: 20px;
+        z-index: 400;
+    }
+</style>

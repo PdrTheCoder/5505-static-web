@@ -3,15 +3,22 @@
 
 <head>
     <title>Hyperlink Intro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="js/jquery-3.7.1.min.js"></script>
 </head>
 
 <body>
     <div class="grid-container">
         <nav>
             <div class="nav-content">
-                <a href="#" id="concept">Explain</a>
-                <a href="#" id="timeTravel">Time Travel</a>
-                <a href="#" id="About">About</a>
+                <a href="index.html" id="concept">Explain</a>
+                <a href="timetravel.html" id="timeTravel">Time Travel</a>
+                <a href="" id="About">About</a>
             </div>
         </nav>
         <div class="main">
@@ -21,9 +28,10 @@
                     clicking or tapping.
                     In the context of web, hyperlinks are embeded in text, images, icons or other elements within web
                     pages.
-                    A hyperlink points to a whole document or to a specific element within a document. A simple and common hyperlink embeded in text can be:</p>
+                    A hyperlink points to a whole document or to a specific element within a document. A simple and
+                    common hyperlink embeded in text can be:</p>
 
-                    <p><a href="http://www.google.com">Click me to Google!</a></p>
+                <p><a href="http://www.google.com">Click me to Google!</a></p>
 
                 <p>They allow users to navigate between different web pages and resources seamlessly, forming the
                     interconnected network we use every day.</p>
@@ -33,7 +41,8 @@
                 <div id="example-grid">
                     <div class="link-example">
                         <div>Text Hyperlink</div>
-                        <div>A Hyperlink can be embeded in text, this is quite commonly seen in web pages.</div>
+                        <div>A Hyperlink can be embeded in text, this is quite commonly seen in web pages. And text with
+                            Hyperlink is called Hypertext.</div>
                         <div><a href="https://www.pokemon.com/au/">Visit Pokemon Web</a></div>
                         <div>HTML code:</div>
                         <code class="language-html">
@@ -42,30 +51,54 @@
                     </div>
                     <div class="link-example">
                         <div>Image Hyperlink</div>
-                        <div>Hyperlinks can also be applied to images. Clicking on the linked image navigates the user to the designated URL.</div>
-                        <div><a href="https://www.pokemon.com/au/">
-                            <img src="pokemon.png" alt="Pokemon Image">
-                        </a></div>
+                        <div>Hyperlinks can also be applied to images. Clicking on the linked image navigates the user
+                            to the designated URL. It is similar to text Hyperlink with only
+                            the text being changed to a image. Image Hyperlink can also become complicated. There is one
+                            type called image map Hyperlink. In a single image, we can draw
+                            multiple clickable areas linking to different destinations / documents.
+                        </div>
+                        <div>
+                            <a href="https://www.pokemon.com/au/">
+                                <img src="pokemon.png" alt="Pokemon Image">
+                            </a>
+                        </div>
                         <div>HTML code:</div>
                         <code class="language-html">
-                            &ltimg src="pokemon.png" alt="Pokemon Image"&gt
+                            &lta href="https://www.pokemon.com/au/"&gt&ltimg src="pokemon.png" &gt&lt/a&gt
                         </code>
                     </div>
                     <div class="link-example">
                         <div>Mailto Hyperlink</div>
-                        <div>Hyperlinks can also be applied to images. Clicking on the linked image navigates the user to the designated URL.</div>
+                        <div>Another type is email Hyperlink. Hyperlink is embedded into e-mail address and allows
+                            visitors to send an e-mail message to this e-mail address.</div>
                         <div>
                             <a href="mailto:23870387@student.uwa.edu.au">Send Me An Email!</a>
                         </div>
                         <div>HTML code:</div>
                         <code class="language-html">
-                            &ltimg src="pokemon.png" alt="Pokemon Image"&gt
+                            &lta href="mailto:23870387@student.uwa.edu.au"&gtSend Me An Email!&lt/a&gt
                         </code>
 
                     </div>
                     <div class="link-example">
                         <div>Download Hyperlink</div>
-                        <div>Hyperlinks can also be applied to images. Clicking on the linked image navigates the user to the designated URL.</div>
+                        <div>
+                            Hyperlink can also let user to initiate the action of downloading a file. This is achieved
+                            by download Hyperlink. The target resources can be documents, images, audios, videos and
+                            other resources hosted by a server.
+                        </div>
+                        <div>
+                            <a href="pokemon.png" download>Capture a wild Pikachu!</a>
+                        </div>
+                        <div>HTML code:</div>
+                        <code class="language-html">
+                            &lta href="pokemon.png" download&gtCapture a wild Pikachu!&lt/a&gt
+                        </code>
+                    </div>
+                    <div class="link-example">
+                        <div>Download Hyperlink</div>
+                        <div>Hyperlinks can also be applied to images. Clicking on the linked image navigates the user
+                            to the designated URL.</div>
                         <div>
                             <a href="pokemon.png" download>Get a Pikachu!</a>
                         </div>
@@ -75,49 +108,183 @@
                         </code>
                     </div>
                     <div class="link-example">
-                        <div>Download Hyperlink</div>
-                        <div>Hyperlinks can also be applied to images. Clicking on the linked image navigates the user to the designated URL.</div>
+                        <div>Bookmark Hyperlink</div>
+                        <div>A bookmark Hyperlink, also known as an anchor Hyperlink,
+                            is a type of hyperlink that allow users to link to a specific section within a webpage.
+                            The destination doesn't have to the same page.
+                        </div>
                         <div>
-                            <a href="pokemon.png" download>Get a Pikachu!</a>
+                            <a href="index.html#definition">Go back to definition</a>
                         </div>
                         <div>HTML code:</div>
                         <code class="language-html">
                             &ltimg src="pokemon.png" alt="Pokemon Image"&gt
                         </code>
                     </div>
+                    <div class="link-example">
+                        <div>AJAX Hyperlink</div>
+                        <div>When combining AJAX with hyperlinks, you can use JavaScript to intercept the click event on
+                            the hyperlink,
+                            perform an AJAX request to load new content, and then update the page accordingly without
+                            navigating to a new URL.
+                            This approach is often used to create single-page applications (SPAs) where the user
+                            experience
+                            feels more fluid and responsive.
+                        </div>
+                        <div>
+                            <a href="https://restcountries.com/v3.1/region/asia?fields=capital" class="ajax-link">Load
+                                list of capitals in Asia by clicking...</a>
+                        </div>
+                        <div>HTML code:</div>
+                        <code class="language-html">
+                            &ltimg src="pokemon.png" alt="Pokemon Image"&gt
+                        </code>
+                    </div>
+                    <div class="ajax-result">
+                        <div id="remote-content">
+                        </div>
+                    </div>
                 </div>
             </section>
-            <section id="sec3">
+            <section id="more">
+                <h2>
+                    How Hyperlink works in HTML
+                </h2>
+                <p>
+                    In web browsing, hyperlinks are typically visually distinguished, often appearing in a different
+                    color, font, or style, and may include symbols indicating the link target or document type. This
+                    styling, known as link decoration, is controlled using CSS. Additionally, browsers may change the
+                    mouse cursor to a hand icon to indicate a clickable link. By default, links are usually displayed in
+                    underlined blue text for unvisited links and underlined purple text for visited links. When a user
+                    clicks on a link, the browser opens the link's target, which may trigger another program to handle
+                    non-HTML file types depending on browser settings and plugins.
+                </p>
+                <p>
+                    When the use click the link, the browser display the link's target. But the effect may vary with the
+                    hyperlink system or according to how the link is implemented. On WWW most hyperlinks cause the
+                    target
+                    document to replace the source page. But some are mark to cause the target to open in a new window.
+                </p>
+                <p>
+                    Another behavior could be...the user clicks the link and then a AJAX call will get information from
+                    remote document Or API. In this case, the source document will not get refreshed entirely but part
+                    of the
+                    content get updated. This kind of link is called AJAX link. It appears as a link and can trigger
+                    part of the
+                    web page get updated instead of loading an entire page. However, the technical implementation really
+                    has nothing to
+                    do with the link itself. The link can be replace with most other elements such as a button, a text.
+                    It is just a dom element with a click event listener. The dom element does not has to be a
+                    hyperlink, it
+                    can be any dom with a click event listener.
+                </p>
+
+                <h2>
+                    More than HTML
+                </h2>
+                <p>
+                    Actually, Hyperlink is a broader concept. It is used in various technologies, not just limited to
+                    HTML.
+                <ul>
+                    <li>
+                        XLink, as recommended by the W3C, introduces hyperlinks with enhanced capabilities beyond those
+                        found in HTML. These advanced links enable multidirectional connections and facilitate linking
+                        both within and between XML documents. They also encompass simple links, which, being
+                        unidirectional, do not provide additional functionality compared to standard HTML hyperlinks.
+                    </li>
+                    <li>
+                        In virtual worlds, hyperlinks serve as gateways to navigate between diffrerent virtual
+                        locations, objects, or experience within the virtual environment. These hyperlinks can be
+                        embedded within the virtual world's interface or content, allowing users to seamlessly
+                        transition between various areas or interact with specific elements.
+                    </li>
+                </ul>
+                </p>
             </section>
         </div>
+        <footer>Pedro Wang (23870387) - 2024 - CITS4407</footer>
     </div>
 </body>
 
 </html>
 
+<script>
+    function insert_content(data) {
+        let toInsert = '';
+        data.forEach(d => {
+            if (d.capital[0] != 'undefined') {
+                console.log(d.capital[0]);
+                toInsert += `<div class='capitalName'>${d.capital[0]}</div>`
+            }
+        });
+        $('#remote-content').html(toInsert);
+    }
+
+    $(document).ready(function () {
+        $('.ajax-link').click(function (e) {
+            // present default behavior
+            e.preventDefault();
+
+            $.ajax({
+                url: $(this).attr('href'),
+                type: 'GET',
+                success: function (data) {
+                    insert_content(data);
+                },
+                error: function () {
+                    console.log(777);
+                }
+            })
+        })
+    });
+</script>
+
+
 <style>
+    body {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
     .grid-container {
         display: grid;
-        grid-template-rows: 50px auto;
-        grid-template-columns: 1fr 7fr 1fr;
+        grid-template-rows: 50px auto 20px;
+        grid-template-columns: 2fr 7fr 2fr;
         grid-template-areas:
             'nav nav nav'
-            '. main .';
+            '. main .'
+            'footer footer footer';
+    }
+
+    footer {
+        grid-area: footer;
+        text-align: center;
     }
 
     nav {
-        background-color: #27374D;
+        background-color: #31363F;
         grid-area: nav;
         display: grid;
-        grid-template-columns: 1fr 7fr 1fr;
-        grid-template-areas: '. main .';
+        grid-template-columns: 2fr 7fr 2fr;
+        grid-template-areas: '. navmain .';
     }
 
     .nav-content {
         display: grid;
-        grid-area: main;
+        grid-area: navmain;
         grid-template-columns: repeat(8, 1fr);
         grid-gap: 10px;
+    }
+
+    .nav-content>a:hover {
+        background-color: #76ABAE;
+        color:white;
+    }
+
+    .nav-content>a {
+        line-height: 50px;
+        text-decoration: none;
     }
 
     #concept {
@@ -133,7 +300,7 @@
     }
 
     nav a {
-        align-items: center;
+        text-align: center;
         color: white;
     }
 
@@ -145,7 +312,7 @@
 
     .main {
         grid-area: main;
-        height: calc(100vh - 100px);
+        /* height: calc(100vh - 100px); */
     }
 
     body {
@@ -159,8 +326,43 @@
 
     #example-grid {
         display: grid;
-        grid-template-rows: auto auto auto;
+        grid-template-rows: auto auto auto auto;
         grid-template-columns: 1fr 1fr;
         grid-gap: 1em;
+    }
+
+    .link-example {
+        display: grid;
+        grid-template-rows: 40px minmax(40px, auto) minmax(180px, auto) 30px 45px;
+        grid-row-gap: 1em;
+
+        code {
+            background-color: #d9d9d9;
+            line-height: 45px;
+            text-align: center;
+        }
+    }
+
+    .link-example>div:first-child {
+        background-color: #284b63;
+        color: white;
+        line-height: 40px;
+        text-align: center;
+        font-size: larger;
+    }
+
+    .link-example>div:nth-child(3) {
+        text-align: center;
+        line-height: 180px;
+    }
+
+    #remote-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 5px;
+    }
+
+    .blank {
+        margin-bottom: 40px;
     }
 </style>
