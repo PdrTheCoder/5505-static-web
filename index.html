@@ -35,6 +35,7 @@
 
                 <p>They allow users to navigate between different web pages and resources seamlessly, forming the
                     interconnected network we use every day.</p>
+                <p style="font-style: italic">This content is inspired by WikiPedia page <a href="https://en.wikipedia.org/wiki/Hyperlink">Hyperlink</a>.</p>
             </section>
             <section id="exmaples">
                 <h2>Different types of Hyperlinks</h2>
@@ -59,7 +60,7 @@
                         </div>
                         <div>
                             <a href="https://www.pokemon.com/au/">
-                                <img src="pokemon.png" alt="Pokemon Image">
+                                <img src="img/pokemon.png" alt="Pokemon">
                             </a>
                         </div>
                         <div>HTML code:</div>
@@ -70,7 +71,7 @@
                     <div class="link-example">
                         <div>Mailto Hyperlink</div>
                         <div>Another type is email Hyperlink. Hyperlink is embedded into e-mail address and allows
-                            visitors to send an e-mail message to this e-mail address.</div>
+                            visitors to send an e-mail message to this e-mail address. To do this, one needs to add "mailto:&ltsome email&gt" in href.</div>
                         <div>
                             <a href="mailto:23870387@student.uwa.edu.au">Send Me An Email!</a>
                         </div>
@@ -85,26 +86,14 @@
                         <div>
                             Hyperlink can also let user to initiate the action of downloading a file. This is achieved
                             by download Hyperlink. The target resources can be documents, images, audios, videos and
-                            other resources hosted by a server.
+                            other resources hosted by a server. For developer, only need to append a "download" in the tag.
                         </div>
                         <div>
-                            <a href="pokemon.png" download>Capture a wild Pikachu!</a>
+                            <a href="img/pokemon.png" download>Capture a wild Pikachu!</a>
                         </div>
                         <div>HTML code:</div>
                         <code class="language-html">
                             &lta href="pokemon.png" download&gtCapture a wild Pikachu!&lt/a&gt
-                        </code>
-                    </div>
-                    <div class="link-example">
-                        <div>Download Hyperlink</div>
-                        <div>Hyperlinks can also be applied to images. Clicking on the linked image navigates the user
-                            to the designated URL.</div>
-                        <div>
-                            <a href="pokemon.png" download>Get a Pikachu!</a>
-                        </div>
-                        <div>HTML code:</div>
-                        <code class="language-html">
-                            &ltimg src="pokemon.png" alt="Pokemon Image"&gt
                         </code>
                     </div>
                     <div class="link-example">
@@ -118,7 +107,7 @@
                         </div>
                         <div>HTML code:</div>
                         <code class="language-html">
-                            &ltimg src="pokemon.png" alt="Pokemon Image"&gt
+                            &lta href="index.html#definition"&gtGo back to definition&lt/a&gt
                         </code>
                     </div>
                     <div class="link-example">
@@ -135,11 +124,9 @@
                             <a href="https://restcountries.com/v3.1/region/asia?fields=capital" class="ajax-link">Load
                                 list of capitals in Asia by clicking...</a>
                         </div>
-                        <div>HTML code:</div>
-                        <code class="language-html">
-                            &ltimg src="pokemon.png" alt="Pokemon Image"&gt
-                        </code>
+                        <div>HTML code: Skip</div>
                     </div>
+
                     <div class="ajax-result">
                         <div id="remote-content">
                         </div>
@@ -165,18 +152,20 @@
                     target
                     document to replace the source page. But some are mark to cause the target to open in a new window.
                 </p>
+
+                <p style="font-style: italic">The above two paragraphs are inspired by WikiPedia page <a href="https://en.wikipedia.org/wiki/Hyperlink">Hyperlink</a>.</p>
+
                 <p>
                     Another behavior could be...the user clicks the link and then a AJAX call will get information from
-                    remote document Or API. In this case, the source document will not get refreshed entirely but part
+                    remote/local document Or API. In this case, the source document will not get refreshed entirely but part
                     of the
                     content get updated. This kind of link is called AJAX link. It appears as a link and can trigger
                     part of the
-                    web page get updated instead of loading an entire page. However, the technical implementation really
-                    has nothing to
-                    do with the link itself. The link can be replace with most other elements such as a button, a text.
-                    It is just a dom element with a click event listener. The dom element does not has to be a
+                    web page get updated instead of loading an entire page. However, the technical implementation is unrelated to the link itself. 
+                    The link can be replaced with most other elements such as a button, a text.
+                    It is just a DOM element with a click event listener. The DOM element does not has to be a
                     hyperlink, it
-                    can be any dom with a click event listener.
+                    can be any DOM with a click event listener.
                 </p>
 
                 <h2>
@@ -200,9 +189,10 @@
                     </li>
                 </ul>
                 </p>
+                <a href="index.html#definition">Go back to top</a>
             </section>
         </div>
-        <footer>Pedro Wang (23870387) - 2024 - CITS4407</footer>
+        <footer>Pedro Wang (23870387) - 2024 - CITS5505</footer>
     </div>
 </body>
 
@@ -232,7 +222,7 @@
                     insert_content(data);
                 },
                 error: function () {
-                    console.log(777);
+                    console.log('Fail to fetch the remote data');
                 }
             })
         })
